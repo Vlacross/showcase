@@ -1,0 +1,83 @@
+
+
+.deskHeaderLeft {
+  border: solid 3px white;
+  border-radius: 12px;
+  width: 10%;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.deskHeaderCenter {
+  border: solid 3px white;
+  border-radius: 12px;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.deskHeaderRight {
+  border: solid 3px white;
+  border-radius: 12px;
+  width: 10%;
+  height: 100%;
+
+}
+
+.box {
+  height: 30%;
+  width: 25%;
+  border: solid 1px black;
+  border-radius: 12px;
+  margin: 2px;
+}
+
+.introLetter {
+  font-family: 'Exo 2', sans-serif;
+  height: 30%;
+  width: 25%;
+  border: solid 1px black;
+  border-radius: 12px;
+  margin: 2px;
+  font-weight: 800;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.shadowBottom {
+  box-shadow: 0 15px 5px black, inset 0 -15px 5px black;;
+
+}
+
+
+.shadowRight {
+  box-shadow: 15px 0 5px black, inset -15px 0 5px black;
+
+}
+
+.shadowTop {
+  box-shadow: 0 -15px 5px black, inset 0 15px 5px black;
+
+
+}
+
+.shadowLeft {
+  box-shadow: -15px 0 5px black, inset 15px 0 5px black;
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .shadowLeft {
+    box-shadow: -5px 0 5px black, inset 5px 0 5px black;
+  
+  }
+
+
+}
+

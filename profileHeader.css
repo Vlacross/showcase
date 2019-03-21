@@ -1,0 +1,24 @@
+
+.profileHeader {
+  
+    border-radius: 12px;
+    height: 40vh;
+    display: flex;
+    box-shadow: 0 0 15px silver;
+    padding: 20px;
+
+}
+
+.name {
+  text-decoration: underline;
+  font-family: 'Exo 2', sans-serif;
+  
+}
+
+
+
+
+
+
+
+
