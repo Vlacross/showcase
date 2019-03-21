@@ -7,6 +7,11 @@ const introHeader =
   <div class="box b2"></div>
   <div class="box b3"></div>
   <div class="box b4"></div>
+  <div class="box b5"></div>
+  <div class="box b6"></div>
+  <div class="box b7"></div>
+  <div class="box b8"></div>
+  <div class="box b9"></div>
   </div>
   <div class="deskHeaderRight"></div>
 
@@ -31,6 +36,31 @@ const introLetter3 =
 const introLetter4 = 
 `
 <span class="introLetter 4">V</span>
+`;
+
+const introLetter5 = 
+`
+<span class="introLetter 5">l</span>
+`;
+
+const introLetter6 = 
+`
+<span class="introLetter 6">a</span>
+`;
+
+const introLetter7 = 
+`
+<span class="introLetter 7">s</span>
+`;
+
+const introLetter8 = 
+`
+<span class="introLetter 8">u</span>
+`;
+
+const introLetter9 = 
+`
+<span class="introLetter 9">k</span>
 `;
 
 const profileHeader = 

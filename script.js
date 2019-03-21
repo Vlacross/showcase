@@ -60,7 +60,7 @@ function fancyShow() {
   }, 1050)
   setTimeout(() => {
     $('.deskHeaderLeft').removeClass('shadowTop')
-    $('.deskHeaderLeft').addClass('shadowLeft')
+    $('.deskHeaderLeft').addClass('shadowLeftFinal')
   }, 1125)
 
 };
@@ -68,30 +68,38 @@ function fancyShow() {
 function introTitle() {
   setTimeout(() => {
     $('.b1').addClass('shadowRight')
+    $('.b5').addClass('shadowRight')
+    $('.b9').addClass('shadowRight')
   }, 75)
   setTimeout(() => {
     $('.b1').replaceWith(introLetter1)
-    // $('.introLetter 1').addClass('shadowTop')
+    $('.b5').replaceWith(introLetter5)
+    $('.b9').replaceWith(introLetter9)
   }, 150)
   setTimeout(() => {
     $('.b2').addClass('shadowRight')
+    $('.b6').addClass('shadowRight')
   }, 225)
   setTimeout(() => {
     $('.b2').replaceWith(introLetter2)
-    // $('.introLetter 2').addClass('shadowTop')
+    $('.b6').replaceWith(introLetter6)
   }, 300)
   setTimeout(() => {
     $('.b3').addClass('shadowRight')
+    $('.b7').addClass('shadowRight')
   }, 375)
   setTimeout(() => {
     $('.b3').replaceWith(introLetter3)
+    $('.b7').replaceWith(introLetter7)
     // $('.introLetter 3').addClass('shadowTop')
   }, 450)
   setTimeout(() => {
     $('.b4').addClass('shadowRight')
+    $('.b8').addClass('shadowRight')
   }, 525)
   setTimeout(() => {
     $('.b4').replaceWith(introLetter4)
+    $('.b8').replaceWith(introLetter8)
     // $('.introLetter 4').addClass('shadowTop')
   }, 600)
 }

@@ -38,7 +38,6 @@
   font-family: 'Exo 2', sans-serif;
   height: 30%;
   width: 25%;
-  border: solid 1px black;
   border-radius: 12px;
   margin: 2px;
   font-weight: 800;
@@ -71,11 +70,20 @@
 
 }
 
+.shadowLeftFinal {
+  box-shadow: -15px 0 5px silver, inset 15px 0 5px silver;
+
+}
+
 @media only screen and (max-width: 500px) {
 
   .shadowLeft {
     box-shadow: -5px 0 5px black, inset 5px 0 5px black;
   
+  }
+
+  .introLetter {
+    font-size: 2em;
   }
 
 
