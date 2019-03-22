@@ -1,7 +1,4 @@
 
-
-
-
 const introBannerName = 
 `
 <div  class="wrapper">
@@ -48,69 +45,12 @@ return introHeader
 };
 
 
-function introLetters(str) {
-
-
-  let result = []
-  let count = 1;
-  for (let i = 0; i < str.length; i++) {
-
-    // let box = $(`.box b${count}`)
-
-   
-    `
-    <span class="introLetter ${count}">${str[i]}</span>
-    `
-    count++
-  }
-console.log(result.length)
-// return result
-
-}
-
-
-const introLetter1 = 
+const replayButton = 
 `
-<span class="introLetter 1">T</span>
-`;
-
-const introLetter2 = 
+    <div class="replay">
+      <button class="replayButton">Again</button>
+    </div>
 `
-<span class="introLetter 2">i</span>
-`;
 
-const introLetter3 = 
-`
-<span class="introLetter 3">m</span>
-`;
 
-const introLetter4 = 
-`
-<span class="introLetter 4">V</span>
-`;
-
-const introLetter5 = 
-`
-<span class="introLetter 5">l</span>
-`;
-
-const introLetter6 = 
-`
-<span class="introLetter 6">a</span>
-`;
-
-const introLetter7 = 
-`
-<span class="introLetter 7">s</span>
-`;
-
-const introLetter8 = 
-`
-<span class="introLetter 8">u</span>
-`;
-
-const introLetter9 = 
-`
-<span class="introLetter 9">k</span>
-`;
 

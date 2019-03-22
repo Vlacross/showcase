@@ -1,4 +1,4 @@
-
+let string;
 
 function fancyShow() {
   $('.deskHeaderLeft').addClass('shadowBottom')
@@ -67,44 +67,6 @@ function fancyShow() {
 
 
 
-function introTitle() {
-  setTimeout(() => {
-    $('.b1').addClass('shadowRight')
-    $('.b5').addClass('shadowRight')
-    $('.b9').addClass('shadowRight')
-  }, 75)
-  setTimeout(() => {
-    $('.b1').replaceWith(introLetter1)
-    $('.b5').replaceWith(introLetter5)
-    $('.b9').replaceWith(introLetter9)
-  }, 150)
-  setTimeout(() => {
-    $('.b2').addClass('shadowRight')
-    $('.b6').addClass('shadowRight')
-  }, 225)
-  setTimeout(() => {
-    $('.b2').replaceWith(introLetter2)
-    $('.b6').replaceWith(introLetter6)
-  }, 300)
-  setTimeout(() => {
-    $('.b3').addClass('shadowRight')
-    $('.b7').addClass('shadowRight')
-  }, 375)
-  setTimeout(() => {
-    $('.b3').replaceWith(introLetter3)
-    $('.b7').replaceWith(introLetter7)
-    // $('.introLetter 3').addClass('shadowTop')
-  }, 450)
-  setTimeout(() => {
-    $('.b4').addClass('shadowRight')
-    $('.b8').addClass('shadowRight')
-  }, 525)
-  setTimeout(() => {
-    $('.b4').replaceWith(introLetter4)
-    $('.b8').replaceWith(introLetter8)
-    // $('.introLetter 4').addClass('shadowTop')
-  }, 600)
-}
 
 function showTitle(string) {
   let count = 0;
@@ -173,46 +135,41 @@ function buildTitleGroups(str) {
    boxGroups[count].push(`.b${i+1}`)
     count++
   }
-  // console.log(timeGroups)
-  // console.log(boxGroups)
+
   return [timeGroups, boxGroups]
+  };
+
+  function renderEffects(string) {
+    $('.wrapper').replaceWith(introHeader(string))
+    fancyShow()
+    
+    showTitle(string)
   }
 
-
-
+  
 
 function loadContent() {
   $('.wrapper').replaceWith(introBannerName)
   $('body').on('click', 'button.nameBannerButton', function (e) {
 		e.preventDefault();
-    let string = $('.nameBannerInput').val()
-    console.log(string)
-    $('.wrapper').replaceWith(introHeader(string))
-    fancyShow()
-    introLetters(string)
-    showTitle(string)
+    string = $('.nameBannerInput').val()
+    renderEffects(string)
+    $('footer').prepend(replayButton)
 	});
-  // fancyShow()
-  // introTitle()
+
 };
 
+function ears() {
+  $('body').on('click', 'button.replayButton', function (e) {
+    e.preventDefault();
+    console.log('botboy')
+    renderEffects(string)
+	});
+
+}
 
 
 $(document).ready(() => {
   loadContent()
+  ears()
 });
-
-
-// $('.deskHeaderLeft')
-
-// $('.deskHeaderCenter')
-
-// $('.deskHeaderRight')
-
-// shadowLeft
-
-// shadowRight
-
-// shadowTop
-
-// shadowBottom 

@@ -27,6 +27,14 @@
   border-radius: 4px;
 }
 
+.replayButton {
+  font-size: 2em;
+  margin-top: 2%;
+  padding: 0px 20px 1px 20px;
+  border-radius: 4px;
+  
+}
+
 .deskHeaderLeft {
   border: solid 3px white;
   border-radius: 12px;
@@ -72,6 +80,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+.introLetter:hover {
+  box-shadow: 0 -15px 5px black, inset 0 15px 5px black;
 
 }
 
