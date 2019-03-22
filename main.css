@@ -17,8 +17,42 @@ body {
   padding: 20px;
 }
 
-.replay {
-  display: flex;
-  justify-content: center;
-  margin: 12px;
+.navDiv {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+
 }
+
+.navMenu {
+  position: absolute;
+  font-size: 100%;
+  height: 100%;
+  width: 90%;
+  left: 5%;
+  top: -120%;
+  transition-duration: 1500ms;
+}
+
+.navDiv:hover > .navMenu  {
+  top: 14%;
+  height: 50%;
+  
+}
+
+.navLink {
+  margin: 8%; 
+  font-size: 1.5em;
+  transition-duration: 500ms;
+}
+
+.navLink:hover {
+  font-size: 1.8em;
+  text-shadow: 0 0 35px rgba(4, 2, 78, 0.993);
+
+}
+
+
+
