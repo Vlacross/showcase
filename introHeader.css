@@ -1,7 +1,7 @@
 .introHeaderCenter {
   border: solid 3px white;
   border-radius: 12px;
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -13,6 +13,7 @@
   font-size: 2em;
   border: solid 1px black;
   border-radius: 4px;
+
 }
 
 .nameBannerInputLabel {
@@ -117,6 +118,10 @@
 
 @media only screen and (max-width: 500px) {
 
+  .wrapper {
+    padding: 0px;
+  }
+
   .shadowLeft {
     box-shadow: -5px 0 5px black, inset 5px 0 5px black;
   }
@@ -133,6 +138,11 @@
     font-size: 2em;
   }
 
+  .nameBannerInputLabel {
+    width: 100%;
+    font-size: 2em;
+
+  }
 
 }
 
