@@ -65,6 +65,8 @@ function fancyShow() {
 
 };
 
+
+
 function introTitle() {
   setTimeout(() => {
     $('.b1').addClass('shadowRight')
@@ -104,6 +106,103 @@ function introTitle() {
   }, 600)
 }
 
+function showTitle(string) {
+  let count = 0;
+  const [timeGroups, boxGroups] = buildTitleGroups(string)
+  console.log(timeGroups, boxGroups)
+
+
+  
+  for (let i = 0; i < boxGroups[count].length; i++) {
+    
+      setTimeout(() => {
+        $(boxGroups[count][i]).addClass('shadowRight')
+      }, 75)
+      setTimeout(() => {
+        $(boxGroups[count][i]).replaceWith(timeGroups[count][i])
+      }, 150)
+ 
+      setTimeout(() => {
+        $(boxGroups[count+1][i]).addClass('shadowRight')
+      }, 225)
+      setTimeout(() => {
+        $(boxGroups[count+1][i]).replaceWith(timeGroups[count+1][i])
+      }, 300)
+
+      setTimeout(() => {
+        $(boxGroups[count+2][i]).addClass('shadowRight')
+      }, 375)
+      setTimeout(() => {
+        $(boxGroups[count+2][i]).replaceWith(timeGroups[count+2][i])
+      }, 450)
+
+      setTimeout(() => {
+        $(boxGroups[count+3][i]).addClass('shadowRight')
+      }, 525)
+      setTimeout(() => {
+        $(boxGroups[count+3][i]).replaceWith(timeGroups[count+3][i])
+      }, 650)
+    }
+
+}
+
+function buildTitleGroups(str) {
+  let arr = str.split('');
+    let timeGroups = 
+   [
+    [],
+    [],
+    [],
+    []
+  ];
+
+  let boxGroups = 
+  [
+    [],
+    [],
+    [],
+    []
+  ];
+  
+  let count = 0;
+  for(let i = 0; i < arr.length; i++) {
+
+  if(count === timeGroups.length) {
+  count = 0}
+   timeGroups[count].push(`<span class="introLetter">${arr[i]}</span>`)
+   boxGroups[count].push(`.b${i+1}`)
+    count++
+  }
+  // console.log(timeGroups)
+  // console.log(boxGroups)
+  return [timeGroups, boxGroups]
+  }
+
+
+
+
+function loadContent() {
+  $('.wrapper').replaceWith(introBannerName)
+  $('body').on('click', 'button.nameBannerButton', function (e) {
+		e.preventDefault();
+    let string = $('.nameBannerInput').val()
+    console.log(string)
+    $('.wrapper').replaceWith(introHeader(string))
+    fancyShow()
+    introLetters(string)
+    showTitle(string)
+	});
+  // fancyShow()
+  // introTitle()
+};
+
+
+
+$(document).ready(() => {
+  loadContent()
+});
+
+
 // $('.deskHeaderLeft')
 
 // $('.deskHeaderCenter')
@@ -117,36 +216,3 @@ function introTitle() {
 // shadowTop
 
 // shadowBottom 
-
-
-
-
-function loadContent() {
-  $('.wrapper').replaceWith(introHeader)
-  fancyShow()
-  introTitle()
-};
-
-
-
-$(document).ready(() => {
-  loadContent()
-});
-
-
-
-
-/*
-$(document).ready(function(){
-  predictLocation();
-
-  showText($('.1'));
-  setTimeout(function() {
-    showText($('.2'));}, 1000);
-  setTimeout(function() {
-    showText($('.3'));}, 2000);
-  setTimeout(function() {
-    showText($('.4'));}, 3000); 
-
-});
- */
