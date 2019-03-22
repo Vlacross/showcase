@@ -71,7 +71,6 @@ function fancyShow() {
 function showTitle(string) {
   let count = 0;
   const [timeGroups, boxGroups] = buildTitleGroups(string)
-  console.log(timeGroups, boxGroups)
 
 
   

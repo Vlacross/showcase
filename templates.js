@@ -4,10 +4,11 @@ const introBannerName =
 <div  class="wrapper">
   <div class="deskHeaderLeft"></div>
   <div class="introHeaderCenter">
+  <fielset class="introHeaderCenter">
     <label for="nameBannerInput" class="nameBannerInputLabel">Enter Your Name</label>
       <input id="nameBannerInput" class="nameBannerInput" type="text" min="1" max="24">  
       <button type="submit" class="nameBannerButton">Enter</button>
-    
+    </fieldset>
   </div>
   <div class="deskHeaderRight"></div>
 
